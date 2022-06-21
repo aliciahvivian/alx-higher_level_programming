@@ -1,16 +1,17 @@
-"""Define a class Square."""
+#!/usr/bin/python3
+"""create an empty class called Square"""
 
 
 class Square:
-    """Represent a square."""
+    """create a square.
+    size (no type/value verification)
+    atributes:
+    size: private instance.
+    """
 
     def __init__(self, size=0):
-        """Initialize a new Square.
-        Args:
-            size (int): The size of the new square.
-        """
-        if not isinstance(size, int):
+        self.__size = size
+        if type(size) != int:
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
-        self.__size = size
